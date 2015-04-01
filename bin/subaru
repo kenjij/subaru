@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+require 'kajiki'
+require 'subaru'
+
+
+opts = Kajiki.preset_options(:server, {config: true, error: false, user: false})
+
+Kajiki.run(opts) do |cmd|
+  case cmd
+  when 'start'
+    Subaru::Server.run!(opts)
+  end
+end

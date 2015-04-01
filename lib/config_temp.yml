@@ -1,0 +1,13 @@
+---
+:global:
+  :pretty_json: YES
+  :auth_tokens:
+    :any:
+      - abcd
+
+:devices:
+  factory:
+    :definition: Xytronix::WebRelay
+    :url: http://192.168.0.10
+    :password: password
+    :read_timeout: 15
